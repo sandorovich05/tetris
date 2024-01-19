@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Főoldal</title>
+    <link rel="stylesheet" href="tetriske.css">
+</head>
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: linear-gradient(to bottom, #152256, #0c0f2c);
+        color: beige;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+    }
+
+    .left-section {
+        text-align: center;
+        flex: 1;
+    }
+
+    .right-section {
+        flex: 1;
+        text-align: right;
+    }
+
+    #tryButton {
+        font-size: 18px;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: #000000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    #tryButton:hover {
+        background-color: #266996;
+    }
+
+    #imageContainer {
+        margin-top: 20px;
+    }
+
+    #mainImage {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>Tetris</h1>
+            <p>A játék, mely a matematika és logika ötvözetének tökéletes egyvelege.</p>
+            <a href="game.html" id="tryButton" class="button">Próbálj ki</a>
+        </div>
+        <div class="right-section">
+            <div id="imageContainer">
+                <img id="mainImage" src="assets/image/tetris.png">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
+            e.preventDefault();
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'F12') {
+            e.preventDefault();
+        }
+    });
+
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+</script>
+</html>

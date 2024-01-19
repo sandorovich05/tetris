@@ -1,0 +1,49 @@
+ html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  canvas {
+    border: 1px solid #14a6ef;
+  }
+
+  div {
+    color: beige;
+  }
+
+  body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #152256, #0c0f2c);
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  #score {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #3498db;
+  }
+  
+  #restartButton {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  #restartButton:disabled {
+    background-color: #266996;
+    cursor: not-allowed;
+  }

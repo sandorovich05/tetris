@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <title>Tetris</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="tetriske.css">
+  <script src="tetriske.js"></script>
+</head>
+<body>
+  <div class="container">
+  <canvas width="320" height="640" id="game"></canvas>
+  <audio src="./assets/music/tetris.mp3" autoplay loop></audio>
+  <div id="score">Pontszám: 0</div>
+    <button id="restartButton" onclick="restartGame()" disabled>Újrakezdés</button>
+  </div>
+  <script src="tetris.js"></script>
+</body>
+<script>
+
+  document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
+      e.preventDefault();
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'F12') {
+      e.preventDefault();
+    }
+  });
+
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+</script>
+</html>
